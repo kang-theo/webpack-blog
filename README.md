@@ -2,14 +2,16 @@
 
 yarn init -y
 
-yarn add webpack webpack-cli --dev
+yarn add --dev webpack webpack-cli
 
-npx webpack && use .dist/main.js in index.html
+use .dist/main.js in index.html | npx webpack | preview with Live Server
 
 yarn add style-loader css-loader
 
-yarn add html-webpack-plugin --dev
+yarn add --dev html-webpack-plugin
 
 yarn add --dev babel-loader @babel/core @babel/preset-env
 
 yarn add --dev terser-webpack-plugin
+
+yarn add --dev webpack-dev-server | yarn start

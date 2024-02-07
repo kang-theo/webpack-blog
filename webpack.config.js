@@ -17,6 +17,9 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({
     title: "Blog posts"
   })],
+  devServer: {
+    static: './dist'
+  },
   module: {
     rules: [
       {
