@@ -16,6 +16,10 @@ module.exports = {
           'css-loader' // Parse CSS and build style blocks
         ] 
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/i, // Apply loader to all image files
+        type: 'asset/resource'
+      },
       // {
       //   test: /\.js$/, // Apply loader to all JavaScript files
       //   exclude: /node_modules/,
