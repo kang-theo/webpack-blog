@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -7,6 +8,9 @@ module.exports = {
     filename: 'dist.js', // Output bundle file name
     path: path.resolve(__dirname, 'dist') // Output directory
   },
+  plugins: [new HtmlWebpackPlugin({
+    title: "Blog posts"
+  })],
   module: {
     rules: [
       {
