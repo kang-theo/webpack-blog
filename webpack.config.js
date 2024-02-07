@@ -10,6 +10,12 @@ module.exports = {
     filename: 'dist.js', // Output bundle file name
     path: path.resolve(__dirname, 'dist') // Output directory
   },
+  resolve: {
+    alias: {
+      // '@': path.resolve(__dirname, 'src')
+      '@utils': path.resolve(__dirname, 'src/utils')
+    }
+  },
   optimization: {
     minimize: true,
     minimizer: [new TerserWebpackPlugin()]
