@@ -1,4 +1,5 @@
 import { getBlogPosts } from "./data";
+import "./styles.css";
 
 const blogs = getBlogPosts();
 const ul = document.createElement("ul");
