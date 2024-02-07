@@ -10,6 +10,7 @@ module.exports = {
   entry: './src/index.js', // Entry point of your application
   output: {
     filename: 'dist.js', // Output bundle file name
+    // filename: '[name].[contenthash].js',
     path: path.resolve(__dirname, 'dist') // Output directory
   },
   resolve: {
