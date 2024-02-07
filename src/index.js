@@ -1,1 +1,3 @@
-console.log("Hello World");
+import { getBlogPosts } from "./data";
+
+console.log(getBlogPosts());
