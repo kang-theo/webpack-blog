@@ -15,3 +15,5 @@ yarn add --dev babel-loader @babel/core @babel/preset-env
 yarn add --dev terser-webpack-plugin
 
 yarn add --dev webpack-dev-server | yarn start
+
+yarn add --dev webpack-bundle-analyzer | npx webpack

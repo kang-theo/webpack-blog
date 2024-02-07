@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserWebpackPlugin = require('terser-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'development',
@@ -20,9 +22,12 @@ module.exports = {
     minimize: true,
     minimizer: [new TerserWebpackPlugin()]
   },
-  plugins: [new HtmlWebpackPlugin({
-    title: "Blog posts"
-  })],
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "Blog posts"
+    }),
+    new BundleAnalyzerPlugin()
+  ],
   devServer: {
     static: './dist'
   },
