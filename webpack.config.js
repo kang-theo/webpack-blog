@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserWebpackPlugin = require('terser-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -8,6 +9,10 @@ module.exports = {
   output: {
     filename: 'dist.js', // Output bundle file name
     path: path.resolve(__dirname, 'dist') // Output directory
+  },
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserWebpackPlugin()]
   },
   plugins: [new HtmlWebpackPlugin({
     title: "Blog posts"
